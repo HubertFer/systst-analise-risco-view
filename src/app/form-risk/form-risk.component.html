@@ -1,0 +1,61 @@
+<form [formGroup]="formMain" (ngSubmit)="onSubmit()">
+    <h1>Cadastro Veículo</h1>
+    <table class="tableDesign">
+
+        <tr>
+            <td>
+                <label class="label-control">Marca: </label>
+            </td>
+            <td>
+                <input type="text" id="nomeCandidato" name="marca" placeholder="Digite marca do veículo"
+                    class="form-control" formControlName="marca">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email_candidato" class="label-control">Modelo:</label>
+            </td>
+            <td>
+                <input type="text" name="modelo" placeholder="Modelo do veículo" class="form-control"
+                    formControlName="modelo">
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+
+                <label class="label-control" for="nomeTeste">Ano:</label>
+
+            </td>
+            <td>
+                <input type="text" name="ano" placeholder="Ano do veículo" class="form-control" formControlName="ano">
+            </td>
+            <td>
+                <label for="email_candidato" class="label-control">Valor:</label>
+
+            </td>
+            <td>
+                <input type="text" name="valor" placeholder="Valor do veículo" class="form-control"
+                    formControlName="valor">
+            </td>
+        </tr>
+
+    </table>
+
+
+    <div class="text-center m-b-md m-t-sm">
+        <button id="cancelar" class="btn btn-danger" type="reset" value="Cancelar">Cancelar</button>
+
+        <button class="btn  btn-primary text-uppercase" type="submit" value="Adicionar">Enviar</button>
+    </div>
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</form>

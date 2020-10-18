@@ -1,0 +1,42 @@
+<form #UpdateForm="ngForm" (submit)="onSubmit(UpdateForm.value)" novalidate>
+  <h2 mat-dialog-title>Editar Veiculo</h2>
+  <mat-dialog-content class="mat-typography">
+
+    <tr>
+      <td>
+        <label for="technology">Marca: </label>
+      </td>
+      <td>
+        <input value="{{marca}}" type="text" name="marca" class="form-control" [(ngModel)]="marca" >
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <label for="complexity">Modelo:</label>
+      </td>
+
+      <input value="{{modelo}}" type="text" name="modelo" class="form-control" [(ngModel)]="modelo">
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <label for="firstPart">valor:</label>
+      </td>
+
+      <input value="{{valor}}" type="text" name="valor" class="form-control" [(ngModel)]="valor" >
+    </tr>
+
+    <tr>
+      <td>
+        <label for="firstPart">ano:</label>
+      </td>
+
+      <input value="{{ano}}" type="text" name="ano" class="form-control" [(ngModel)]="ano">
+    </tr>
+
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button type="submit" [mat-dialog-close]="true" cdkFocusInitial>Atualizar</button>
+  </mat-dialog-actions>
+</form>

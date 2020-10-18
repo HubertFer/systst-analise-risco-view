@@ -1,0 +1,54 @@
+header,
+label {
+    font-weight: bold;
+    color: #000000;
+    margin-right: 15px;
+}
+.form-control {
+    width: 25em;
+}
+.tableDesign {
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 20px;
+    background-size: 300px 112px;
+}
+
+header img.logo {
+    width: 200px;
+}
+
+header .avalicao {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    font-family: "Teko", sans-serif;
+}
+
+header .logo-container {
+    padding: 28px;
+}
+
+.form-section {
+    margin: 30px;
+}
+.sectionPrin {
+    padding-bottom: 100px;
+    min-height: 100%;
+}
+
+.question-container {
+    margin: 20px 0px;
+}
+
+.name-container {
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+    list-style-position: inside;
+}
