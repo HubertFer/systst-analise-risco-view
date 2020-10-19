@@ -1,9 +1,8 @@
 
-<app-header></app-header>
-<app-navi-bar></app-navi-bar>
-<mat-form-field>
-    <mat-label>Pesquisa</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder=" ">
+
+<mat-form-field class="filter">
+    <mat-label>FILTRO DE RISCO</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="BAIXO, MEDIO ALTO ">
 </mat-form-field>
 
 <table mat-table [dataSource]="dataSource">

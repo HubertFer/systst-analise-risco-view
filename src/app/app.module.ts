@@ -14,8 +14,8 @@ import { FormRiskComponent } from './form-risk/form-risk.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Update } from './main/update.component';
 import { NaviBarComponent } from './navi-bar/navi-bar.component';
-
-
+import { CommonModule } from '@angular/common';
+import { ToastContainerModule, ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,14 @@ import { NaviBarComponent } from './navi-bar/navi-bar.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    CommonModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+      progressAnimation:'decreasing'}),
+    ToastContainerModule
   ],
   exports: [
     Update

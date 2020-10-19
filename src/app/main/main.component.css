@@ -30,3 +30,7 @@ table {
 .header .logo {
     max-height: 65px;
 }
+
+.filter{
+    padding-left: 20px;
+}

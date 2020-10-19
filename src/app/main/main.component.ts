@@ -1,7 +1,7 @@
 import { MatIconModule } from '@angular/material/icon';
 import { MainModel } from './main.model';
 import { MainService } from './main.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Update } from './update.component';
@@ -13,7 +13,7 @@ import { MatDialog,MatDialogConfig } from '@angular/material/dialog';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   dataSource = new MatTableDataSource<MainModel>();
 
   displayedColumns: string[] = ['id', 'marca', 'modelo', 'ano', 'valor', 'risco', 'edit', 'delete']
@@ -62,6 +62,7 @@ export class MainComponent implements OnInit {
           array.push(item)
         });
         this.dataSource.data = array
+        this.dataSource.paginator = this.paginator;
       }, error => { console.log });
   }
 
